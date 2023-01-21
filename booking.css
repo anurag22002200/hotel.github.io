@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css?family=Numito+Sans:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+
+:root {
+    --font-style: 'Nunito Sans', sans-serif;
+    --light_color: #cbbddb;
+    --mid_color: #8f7cec;
+    --dark_color: #242026;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #131315;
+    font-family: var(--font-style);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* <-------NAV-----------> */
+.navigation {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(51, 18, 68, 0.9);
+
+}
+.login-btn{
+    float: right;
+    text-decoration: none;
+    padding-right: 2%;
+    color: #fff;
+    font-family: Arial;
+    font-weight: 900;
+}
+.login-btn:hover{
+    color: var(--mid_color);
+    text-shadow: #242026;
+}
+
+.navbar-right {
+    float: right;
+    padding-right: 5%;
+}
+
+.navbar-right a {
+    text-decoration: none;
+    padding: 10px;
+    color: #fff;
+    font-family: Arial;
+    font-weight: 900;
+}
+
+
+.navbar-right a:hover {
+    text-decoration: underline;
+}
+
+.navbar-logo {
+    padding-left: 5%;
+    font-family: "Creepster", cursive;
+    font-size: 4vw;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* <-----------MAIN-------------> */
+.login_box {
+    position: relative;
+    padding: 40px;
+    margin: 130px 50px 20px 50px;
+    background-color: var(--dark_color);
+    box-shadow: 0 15px 25px rgba(143, 124, 236, 0.7);
+    border-radius: 10px;
+}
+
+.login_box h2 {
+    margin: 0 0 20px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+
+}
+.login_box .profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #fff;
+    margin: 0px 10px 20px 20px;
+
+}
+
+select{
+    margin: 10px 12px;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    background: transparent;
+    color: var(--mid_color);
+    width: 50%;
+    letter-spacing: 2px;
+    text-align: center;
+    box-shadow: 2px 2px  rgba(143, 124, 236, 0.7);
+}
+select:hover{
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(143, 124, 236, 0.7);
+}
+option{
+    background:#131315;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 20px;
+    
+
+}
+.login_box .user_box input {
+    position: relative;
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.login_box .user_box label {
+    position: relative;
+    left: 0;
+    top: -60px;
+    font-size: 16px;
+    color:#fff;
+    pointer-events: none;
+    transition: 0.5s;
+
+}
+.login_box .user_box input:focus~label,
+.login_box .user_box input:valid~label{
+    top:-85px;
+    left:0;
+    color: var(--mid_color);
+    font-size: 12px;
+}
+
+.message{
+    text-align: center;
+    justify-content: center;
+    color: var(--mid_color);
+    font-size: 18px;
+}
+#book_btn{
+    margin: 20px 2px 2px 2px;
+    padding: 10px 5px;
+    width: 150px;
+    text-align: center;
+    color: var(--light_color);
+    background: transparent;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition:0.5s;
+    letter-spacing: 2px;
+    border: 1px solid var(--mid_color);
+}
+
+#create:hover{
+    background-color: var(--mid_color);
+    color: #fff;
+    border-radius: 5px;
+    border:0 0 5px var(--mid_color), 0 0 25px var(--mid_color), 0 50px var(--mid_color), 0 0 100px var(--mid_color);
+}
+.button_form{
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+}
+#login{
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--light_color);
+    margin: auto;
+    width: 60%;
+    text-align: center;
+}
+#login a{
+    margin:auto;
+    color:var(--mid_color);
+    text-decoration: none;
+}
+#login a:hover{
+    text-decoration: underline;
+}
+
+
+/* <-----------FOOTER------------> */
+footer{
+    background-color: rgba(68, 26, 91, 0.5);
+    padding: 25px;
+    margin-top: 100px;
+    width: 100%;
+    text-align: center;
+    color:#fff;
+}
+.contact{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+.contact label{
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+@media (max-width: 640px){
+    .navbar-right{
+        float: left;
+        padding-left: 4%;
+    }
+    .navbar-logo{
+        font-size: 30px;
+    }
+    .navbar-right a {
+        padding: 2vw;
+    }
+}
+
+@media (max-width: 370px){
+    .navbar-logo{
+        font-size: 7vw;
+        padding: 2%;
+    }
+    .navbar-right a {
+        padding: 2vw;
+    }
+}
+
+
+/* Custom Scrollbar */
+
+::-webkit-scrollbar {
+    width: 1em;
+
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--light_color);
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px var(--dark_color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--mid_color);
+    border-radius: 5px;
+    outline: 1px solid var(--dark_color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(38, 16, 35);
+    width: 15px;
+    border-radius: 3px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" type="image/x-icon" href="Icons/Hotelicon.png" />
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <nav class="navigation">
+        <a href="index.html" class="navbar-logo">Hotel Transylvania</a>
+        <a class="login-btn" href="signup.html">SignUp</a>
+        <a class="login-btn" href="login.html">Login</a>
+        <div class="navbar-right">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="login_box">
+            <h2>Login</h2>
+            <div class="profile">
+                <h3>Login As:</h3>
+                <select name="monster/human">
+                    <option value="" selected hidden>Choose...</option>
+                    <option value="human">Human</option>
+                    <option value="Monster">Monster</option>
+                </select>
+            </div>
+            <form>
+                <div class="user_box">
+                    <input type="text" class="username" name="username" required>
+                    <label>Username</label>
+                </div>
+                <div class="user_box">
+                    <input type="password" class="password" name="password" required>
+                    <label>Password</label>
+
+                </div>
+                <div class="button_form">
+                    <button id="submit" onclick="validate()">Submit</button>
+                    <div id="register">
+                        Don't have an account ?
+                        <a href="signup.html">Register</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="copyright">Copyright &copy 2022 Hotel Transylvania</div>
+        <div class="contact">
+            <div class="contact-box">
+                <img src="https://img.icons8.com/ios-filled/512/company.png" alt="building" width=60px><br>
+                <label>Location</label><br>
+                Lorem, ipsum dolor.
+            </div>
+            <div class="contact-box">
+                <img src="https://img.icons8.com/ios-filled/512/ringing-phone.png" alt="phone" width=60px><br>
+                <label>Phone</label><br>
+                +91 123456789
+            </div>
+            <div class="contact-box">
+                <img src="https://img.icons8.com/ios-glyphs/512/mail-account.png" alt="e-mail" width=60px><br>
+                <label>E-Mail</label><br>
+                fakemail@ghost.com
+            </div>
+        </div>
+    </footer>
+
+    <script src="login.js"></script>
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
+    
+</body>
+
+</html>

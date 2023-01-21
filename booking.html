@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="icon" type="image/x-icon" href="Icons/Hotelicon.png" />
+    <link rel="stylesheet" href="booking.css">
+</head>
+
+<body>
+    <nav class="navigation">
+        <a href="index.html" class="navbar-logo">Hotel Transylvania</a>
+        <a class="login-btn" >Welcome !</a>
+        <div class="navbar-right">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <div class="login_box">
+            <h2>BOOK ROOM NOW</h2>
+            <div class="profile">
+                <h3>Book For:</h3>
+                <select id="book_for_" name="moster/human" required onchange="choose_profile()">
+                    <option value="" selected hidden>Choose...</option>
+                    <option value="human">Human</option>
+                    <option value="monster">Monster</option>
+                </select>
+            </div>
+            <form onsubmit="sendmail() ; reset(); return false" >
+                <div class="user_box">
+                    <input id="user_name" type="text" name="username" required>
+                    <label>Enter Your Name</label>
+                </div>
+                <div class="user_box">
+                    <input  id="user_email" type="email text" name="username" required>
+                    <label>Enter E-mail Address</label>
+                </div>
+                <div class="user_box">
+                    <input id="user_arrival" type="text" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" name="arrival_date" required>
+                    <label>Enter Arrival Date</label>
+                </div>
+                
+                <div class="user_box">
+                    <input id="no._rooms" type="number" min="1" name="no._of_rooms" required id="password">
+                    <label>No. of Rooms</label>
+                </div>
+
+                <div class="user_box">
+                    <input id="no._people" type="number" min="1" name="password" required>
+                    <label>No. Of People</label>
+                </div>
+
+                <div class="message"></div>
+                
+                <div class="user_box">
+                    <select id="room_type" required>
+                        <option value="" selected hidden>Room Type</option>
+                        <option id="single_room" value="single">Single Bed</option>
+                        <option id="double_room" value="double">Double Bed</option>
+                        <option id="triple_room" value="triple">Triple Bed</option>
+                    </select> 
+                </div>
+
+                
+                <div class="button_form">
+                    <button id="book_btn" onclick="sendmail() ; reset(); return false">BOOK</button>
+                    
+                </div>
+                  
+              
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="copyright">Copyright &copy 2023 Hotel Transylvania</div>
+        <div class="contact">
+            <div class="contact-box">
+                <img src="https://img.icons8.com/ios-filled/512/company.png" alt="building" width=60px><br>
+                <label>Location</label><br>
+                Lorem, ipsum dolor.
+            </div>
+            <div class="contact-box">
+                <img src="https://img.icons8.com/ios-filled/512/ringing-phone.png" alt="phone" width=60px><br>
+                <label>Phone</label><br>
+                +91 123456789
+            </div>
+            <div class="contact-box">
+                <img src="https://img.icons8.com/ios-glyphs/512/mail-account.png" alt="e-mail" width=60px><br>
+                <label>E-Mail</label><br>
+                fakemail@ghost.com
+            </div>
+        </div>
+    </footer>
+    <!-- email js   -->
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <!-- email js ends   -->
+
+    <script src="booking.js"></script>
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
+    
+</body>
+
+</html>
